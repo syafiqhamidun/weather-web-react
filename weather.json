@@ -1,0 +1,31 @@
+{
+  "coord": { "lon": 101.45, "lat": 3.0333 },
+  "weather": [
+    { "id": 801, "main": "Clouds", "description": "few clouds", "icon": "02d" }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 31.11,
+    "feels_like": 36.71,
+    "temp_min": 29.75,
+    "temp_max": 31.58,
+    "pressure": 1010,
+    "humidity": 66
+  },
+  "visibility": 10000,
+  "wind": { "speed": 1.03, "deg": 0 },
+  "rain": { "1h": 0.1 },
+  "clouds": { "all": 20 },
+  "dt": 1701843336,
+  "sys": {
+    "type": 1,
+    "id": 9446,
+    "country": "MY",
+    "sunrise": 1701817592,
+    "sunset": 1701860622
+  },
+  "timezone": 28800,
+  "id": 1732905,
+  "name": "Klang",
+  "cod": 200
+}
