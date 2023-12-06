@@ -8,8 +8,7 @@ function App() {
 
   return (
  <div className="app">
-      <div className="container">
-
+      <div className="contain">
         <div className="top">
           <div className="location">
             <h2>Klang</h2>
@@ -24,17 +23,15 @@ function App() {
   
         <div className="bottom">
           <div className="feels">
-            <p>32°C</p>
+            32°C
           </div>
-          <div className="humidity">
-            <p>20%</p>
+          <div className="humid">
+            20%
           </div>
           <div className="wind">
             12MPH
           </div>
         </div>
-
-
       </div>
   </div>
   );
