@@ -26,7 +26,6 @@ function App() {
   };
   };
 
-
   return (
  <div className="app">
       <h2>WEATHER INFORMATION DASHBOARD</h2>
