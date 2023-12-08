@@ -7,23 +7,29 @@ function App() {
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=50ed9bb0f99e678bbff93f3cef87d35c&units=metric`
 
-// DATE
+/** DATE : setup the current date
+ * "useEffect" is used to access the count state variable right from the effect
+ * "setCurrentDate" is interval setup to updates the date state every 1000 millisecond
+ * "clearInterval" is cleanup function to preventing memory leaks
+ */
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentDate(new Date());
-    }, 1000);
+      setCurrentDate(new Date()); 
+    }, 1000); //1000 millisecond unit
     return() => clearInterval(intervalId);
   },[]);
 
-// SEARCH BAR
+/** SEARCH BAR : used to search the city and display the result
+ */ 
   const searchLocation = (event) => {
-  if (event.key === 'Enter') {
-    fetch(url)
-    .then((res) => res.json())
+  if (event.key === 'Enter') {  //Check if the pressed key is the "Enter" key
+    fetch(url) //Fetch API from the URL
+    .then((res) => res.json()) //Determine the response body as JSON
     .then((result) => {
-      setWeather(result);
+      setWeather(result); 
     });
-  };
+  }
+  
   };
 
   return (
@@ -32,6 +38,8 @@ function App() {
       <div className="contain">
         <div className="search">
           <p>{currentDate.toLocaleDateString()}</p>
+
+          {/* onKeyPress is keyboard event in JS that triggered when a key is pressed */}
           <input 
             type="text"
             value={location}
@@ -40,8 +48,13 @@ function App() {
             placeholder="Search Location" />
         </div>
 
-      {(typeof weather.main != "undefined") ? 
+      {/* Render weather information when 'main' property is defined */}
+      {(typeof weather.main != "undefined") ? (
+
+      // Divide display into two sections for better infographic
       <div className="subcontain">
+
+          {/* TOP */}
           <div className="top">
             <div className="location">
               <h1>{weather.name}</h1>
@@ -58,6 +71,7 @@ function App() {
             </div>
           </div>
   
+          {/* BOTTOM */}
           <div className="bottom">
             <div className="humid">
               <p className="bold">{weather.main.humidity}%</p>
@@ -68,13 +82,14 @@ function App() {
               <p className="para">Wind Speed</p>
             </div>
             <div className="feels">
-              <p className="bold">{weather.main.feels_like.toFixed()} °C</p>
+              <p className="bold">{weather.main.feels_like.toFixed()} °C</p> 
               <p className="para">Feels Like</p>
             </div>
         </div>
       </div>
       
-      : null }
+      // Expression if false
+      ) : ( null )}
       </div>
   </div>
   );

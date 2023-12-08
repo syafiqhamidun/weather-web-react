@@ -18,8 +18,8 @@ h1 {
   width: 100%;
   height: 100vh;
   display: flex;
-  color: white;
-  background-color:#363536 ;
+  color: #F0ECE5;
+  background-color:#F0ECE5;
   top: 100px;
   flex-direction: column;
   align-items: center;
@@ -27,11 +27,12 @@ h1 {
 }
 
 .app h2{
-  background-color:#363536;
+  background-color:#F0ECE5;
   margin-top: 10px;
   font-size: 2rem;
   text-align: center;
   font-family:sans-serif;
+  color: #161A30;
 }
 
 .contain {
@@ -61,19 +62,19 @@ h1 {
 }
 
 .app input {
-  background-color: #656265;
+  background-color: #F0ECE5;
   width: 200px;
   height: 35px;
   border-radius: 10px;
   text-align: center;
   border: none;
-  color: white;
+  color: black;
   font-weight: 500;
   font-size: 1.2rem;
 }
 
 ::placeholder {
-  color: white;
+  color: black;
   font-size: 1rem;
 }
 
