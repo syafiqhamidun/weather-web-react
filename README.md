@@ -38,4 +38,5 @@ You may also see any lint errors in the console.
 ### 5. Display information
 
 => Create components to display the current weather conditions, such as temperature, humidity, wind speed, and feels like.
+
 => Display icons or images based on the weather conditions.
