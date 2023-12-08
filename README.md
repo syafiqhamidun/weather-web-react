@@ -5,8 +5,9 @@ Develop a simple yet functional React JS web application to demonstrate my found
 
 ## Available Scripts
 
-In the project directory, you can run:
+The main file for this project is App.js
 
+In this file, you can run:
 
 ### `npm start`
 
